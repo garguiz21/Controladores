@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Controladores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-dI-ttu">
+                                <rect key="frame" x="10" y="57" width="370" height="743"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-9P-tde">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="247.66666666666666"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="hopper"/>
+                                        <connections>
+                                            <segue destination="PHl-PE-GdS" kind="showDetail" identifier="hopper" id="OTw-wl-Cd4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Un-x8-c38">
+                                        <rect key="frame" x="0.0" y="247.66666666666669" width="370" height="247.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="liskov"/>
+                                        <connections>
+                                            <segue destination="PHl-PE-GdS" kind="showDetail" identifier="liskov" id="eIY-H3-YXO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogJ-Fi-e6d">
+                                        <rect key="frame" x="0.0" y="495.33333333333343" width="370" height="247.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="lovelace"/>
+                                        <connections>
+                                            <segue destination="PHl-PE-GdS" kind="showDetail" identifier="lovelace" id="EV4-yc-SAd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IPC-dI-ttu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gZL-sd-oTk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IPC-dI-ttu" secondAttribute="bottom" constant="10" id="n89-TW-39L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IPC-dI-ttu" secondAttribute="trailing" constant="10" id="pjh-G4-f7b"/>
+                            <constraint firstItem="IPC-dI-ttu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vcj-6I-49u"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-591" y="-731"/>
+        </scene>
+        <!--DetailsController-->
+        <scene sceneID="ikX-un-ZNS">
+            <objects>
+                <viewController title="DetailsController" id="PHl-PE-GdS" customClass="SecundarioViewController" customModule="Controladores" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScQ-aL-lfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu7-P6-NOk">
+                                <rect key="frame" x="163" y="67" width="64" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Atrás"/>
+                                <connections>
+                                    <segue destination="ytv-je-gzk" kind="unwind" unwindAction="retornoDeSecundariaWithSegue:" id="Uiv-8K-V54"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-gu-bbw">
+                                <rect key="frame" x="40" y="121.33333333333331" width="310" height="544.33333333333348"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9qz-Xc-fba"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yu7-P6-NOk" firstAttribute="centerX" secondItem="ScQ-aL-lfQ" secondAttribute="centerX" id="KJC-dY-VCq"/>
+                            <constraint firstItem="6lj-gu-bbw" firstAttribute="leading" secondItem="9qz-Xc-fba" secondAttribute="leading" constant="40" id="QOo-xS-k3F"/>
+                            <constraint firstItem="6lj-gu-bbw" firstAttribute="top" secondItem="yu7-P6-NOk" secondAttribute="bottom" constant="20" id="QwH-CZ-rzA"/>
+                            <constraint firstItem="yu7-P6-NOk" firstAttribute="top" secondItem="ScQ-aL-lfQ" secondAttribute="topMargin" constant="20" id="k54-59-RW1"/>
+                            <constraint firstItem="6lj-gu-bbw" firstAttribute="centerX" secondItem="ScQ-aL-lfQ" secondAttribute="centerX" id="qkb-gz-bTp"/>
+                            <constraint firstItem="6lj-gu-bbw" firstAttribute="centerY" secondItem="ScQ-aL-lfQ" secondAttribute="centerY" id="wSf-Aa-AQo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="texto" destination="6lj-gu-bbw" id="Yhe-tk-7Ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glB-9J-59g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ytv-je-gzk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="553.84615384615381" y="-716.5876777251184"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EV4-yc-SAd"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="hopper" width="320" height="215"/>
+        <image name="liskov" width="320" height="215"/>
+        <image name="lovelace" width="320" height="215"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

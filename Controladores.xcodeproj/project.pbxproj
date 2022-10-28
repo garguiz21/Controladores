@@ -13,6 +13,7 @@
 		C77D8F30290C465E00F0835F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77D8F2E290C465E00F0835F /* Main.storyboard */; };
 		C77D8F32290C465F00F0835F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77D8F31290C465F00F0835F /* Assets.xcassets */; };
 		C77D8F35290C465F00F0835F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77D8F33290C465F00F0835F /* LaunchScreen.storyboard */; };
+		C77D8F3D290C489500F0835F /* SecundarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D8F3C290C489500F0835F /* SecundarioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C77D8F31290C465F00F0835F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C77D8F34290C465F00F0835F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C77D8F36290C465F00F0835F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C77D8F3C290C489500F0835F /* SecundarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecundarioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		C77D8F27290C465E00F0835F /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
-				C77D8F28290C465E00F0835F /* AppDelegate.swift */,
+				C77D8F3E290C489C00F0835F /* Controllers */,
 				C77D8F2A290C465E00F0835F /* SceneDelegate.swift */,
-				C77D8F2C290C465E00F0835F /* ViewController.swift */,
+				C77D8F28290C465E00F0835F /* AppDelegate.swift */,
 				C77D8F2E290C465E00F0835F /* Main.storyboard */,
 				C77D8F31290C465F00F0835F /* Assets.xcassets */,
 				C77D8F33290C465F00F0835F /* LaunchScreen.storyboard */,
 				C77D8F36290C465F00F0835F /* Info.plist */,
 			);
 			path = Controladores;
+			sourceTree = "<group>";
+		};
+		C77D8F3E290C489C00F0835F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C77D8F2C290C465E00F0835F /* ViewController.swift */,
+				C77D8F3C290C489500F0835F /* SecundarioViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77D8F3D290C489500F0835F /* SecundarioViewController.swift in Sources */,
 				C77D8F2D290C465E00F0835F /* ViewController.swift in Sources */,
 				C77D8F29290C465E00F0835F /* AppDelegate.swift in Sources */,
 				C77D8F2B290C465E00F0835F /* SceneDelegate.swift in Sources */,
